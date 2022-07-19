@@ -1,0 +1,39 @@
+
+
+<div class="container-fluid">
+  <app-busquedas (onEmitirPokemon)="recibirPokemon($event)"></app-busquedas>
+
+  <div *ngIf="!pokemon, else mostrarPokemon">
+    <app-lista-resultados [pokemonArray]="allPokemons"></app-lista-resultados>
+  </div>
+ 
+
+<ng-template #mostrarPokemon>
+
+  <div *ngIf="noExiste, else existe">
+    <h3>no existo wey no mames</h3>
+  </div>
+
+<ng-template #existe>
+  <div class="row row-cols-md-2 row-cols-1 position-relative " >
+    <div class="col d-flex justify-content-center justify-content-md-end py-3 animate__animated animate__bounce" >
+      <div class="card my-auto " style="width: 25rem;"
+      [routerLink]="['pokemon/',pokemon.name]"
+      >
+          <img [src]="pokemon.sprites.other.home.front_default" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{pokemon.name | titlecase}}</h5>
+            <p class="card-text lead fs-6">{{pokemon.name | titlecase}} es un pokemon de tipo {{pokemon.types[0].type.name }}  y su habilidad más común es {{pokemon.abilities[0].ability.name}} .</p>
+          </div>     
+        </div>   
+  </div>
+  </div>
+</ng-template>
+
+</ng-template>
+
+
+</div>
+
+
+

@@ -1,0 +1,43 @@
+<app-busquedas></app-busquedas>
+
+<div class="container-fluid h-75 " *ngIf="pokemon, else noexiste" >
+    <div class="row row-cols-md-2 row-cols-1 position-relative " >
+
+      <div class="col d-flex justify-content-center justify-content-md-end py-3 animate__animated animate__bounce" >
+          <div class="card my-auto" style="width: 25rem;">
+              <img [src]="pokemon.sprites.other.home.front_default" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{pokemon.name | titlecase}}</h5>
+                <p class="card-text lead fs-6">{{pokemon.name | titlecase}} es un pokemon de tipo {{pokemon.types[0].type.name }}  y su habilidad más común es {{pokemon.abilities[0].ability.name}} .</p>
+              </div>     
+            </div>   
+      </div>
+    
+    
+      <div class="col d-flex justify-content-center justify-content-md-start py-3 animate__animated animate__bounce ">
+        <div class="card" style="width: 25rem;">
+            <div class="card-body">
+              <h5 class="card-title">Descripción:</h5>
+              <p *ngFor="let note of notas">{{note}}</p>
+            </div>     
+          </div>   
+    </div>
+    </div>
+  
+  </div>
+
+
+
+
+<ng-template  #noexiste>
+<div class="h-75 ">
+  <app-busquedas></app-busquedas>
+  <div class="alert alert-info w-50 mx-auto p-5 mt-3" role="alert">
+    Cargando, espera un momento...
+   </div>
+</div>
+ 
+
+
+
+</ng-template>

@@ -1,0 +1,31 @@
+
+<!-- resultados -->
+
+
+
+<div class="row row-cols-md-4 row-cols-1">
+
+    <div class="col d-flex justify-content-center py-3 animate__animated animate__bounce"
+    *ngFor="let pokemons of allPokemons"
+    >
+        <div class="card card--pointer" style="cursor:pointer"
+         loading="lazy"
+         [routerLink]="['pokemon/',pokemons.name]"
+         style="width: 25rem;"
+         >
+            <img [src]="pokemons.sprites.other.home.front_default" class="card-img-top" alt="..." loading="lazy">
+            <div class="card-body">
+              <h5 class="card-title">{{pokemons.name | titlecase}}</h5>
+              <p class="card-text lead fs-6">{{pokemons.name | titlecase}} es un pokemon de tipo {{pokemons.types[0].type.name }}  y su habilidad más común es {{pokemons.abilities[0].ability.name}} .</p>
+            </div>     
+          </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
