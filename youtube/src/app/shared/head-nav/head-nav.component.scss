@@ -1,0 +1,39 @@
+.Header {
+    height: 3.5rem;
+    background-color: #333333;
+
+    &-hamburguer {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &-img {
+        width: 2.5rem;
+        border-radius: 7px;
+
+        &--search {
+            filter: brightness(1.1);
+            mix-blend-mode: multiply;
+            max-height: 1.5rem;
+            object-fit: contain;
+        }
+
+        &--logo{
+            border:2px solid gray;
+            border-radius: .7rem;
+        }
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+        }
+    }
+
+    &-content {
+        &--logo{
+            
+        }
+    }
+
+}

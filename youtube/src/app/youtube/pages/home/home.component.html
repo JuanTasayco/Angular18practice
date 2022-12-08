@@ -1,0 +1,15 @@
+<div class="container-fluid h-100 p-0 position-relative d-flex flex-column">
+
+    <app-head-nav (emitEventClick)="openMenu()"></app-head-nav>
+
+    <div class="row m-0 flex-grow-1">
+
+        <div class="col-2 content h-100 p-0" #cuadrado>
+        </div>
+        <div class="section-content col-10 flex-grow-1">
+            <router-outlet></router-outlet>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,13 @@
+@use "src/_custom" as *;
+
+.content {
+    height: 100%;
+    max-width: 14rem;
+    transition: 0.5s;
+
+    @include media-breakpoint-down(xxl) {
+        background-color: black;
+    }
+}
+
+
