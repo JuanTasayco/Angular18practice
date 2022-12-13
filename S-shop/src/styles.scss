@@ -6,7 +6,8 @@
 
 
 @use "./app/admin/pages/home/home.component" as homeAdmin;
-
+@use "./app/admin/pages/add-product/add-product.component";
+@use "./app/admin/shared/sidenav-admin/sidenav-admin.component";
 
 @use "./app/e-shop/shared/navbar-shop/navbar-shop.component";
 @use "./app/e-shop/pages/home/home.component.scss" as homeShop;

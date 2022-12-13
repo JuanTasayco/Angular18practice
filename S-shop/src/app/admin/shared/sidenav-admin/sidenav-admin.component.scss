@@ -1,0 +1,17 @@
+.SideAdmin {
+
+    &-img {
+        max-height: 300px;
+        border-radius: 50%;
+        transform: scaleX(50%);
+        height: 100%;
+        width: 100%;
+    }
+
+    &-logo {
+        max-height: 8rem;
+        filter: brightness(1.1);
+        mix-blend-mode: multiply;
+        object-fit: cover;
+    }
+}
