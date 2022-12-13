@@ -1,0 +1,84 @@
+@use "src/_custom" as *;
+
+.Home {
+    /*     background-color: #F5F5F5; */
+
+    &-img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        border-radius: .3rem;
+        position: relative;
+
+        &.description {
+            height: 6rem;
+        }
+
+        &.imgreduce {
+            max-height: 20rem;
+            object-fit: contain;
+        }
+
+        &.product {
+            max-height: 340px;
+        }
+
+        &.slideImg {
+            max-height: 15rem;
+        }
+    }
+
+    &-row {
+        border-radius: 1rem;
+
+        &.product {
+            background-color: white;
+            padding: 3rem;
+            margin-top: 2rem;
+        }
+    }
+
+    &-ad {
+        background-color: #F5F5F5;
+    }
+
+    &-col {
+        margin: auto;
+
+        &.pub {
+            margin: 0;
+        }
+
+    }
+
+}
+
+.Slider {
+    overflow: hidden;
+    transform: ease 2s;
+    position: relative;
+
+    &-content {
+        height: 25rem;
+        display: grid;
+        grid-template-columns: repeat(6, minmax(350px, 1fr));
+        gap: 1rem;
+        /*  transition: all .5s ease; */
+        position: relative;
+
+        @include media-breakpoint-down(md) {
+            height: 20rem;
+            grid-template-columns: repeat(6, minmax(250px, 1fr));
+        }
+
+    }
+
+    &-item {
+        border-radius: 1.5rem;
+        overflow: hidden;
+    }
+
+
+
+
+}

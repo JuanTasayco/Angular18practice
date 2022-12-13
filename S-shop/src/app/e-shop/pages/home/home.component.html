@@ -1,1 +1,159 @@
-<p>home works!</p>
+<app-navbar-shop></app-navbar-shop>
+<div class="Home bg-light">
+    <!-- SEC -->
+    <app-carrousel></app-carrousel>
+    <!-- END SEC -->
+
+    <div class="Home-ad py-5 mt-2 px-3">
+        <h1 class="Home-h1 text-center display-5">Ofertas especiales de Navidad</h1>
+    </div>
+
+
+    <div class="Home-section container mt-5">
+        <div class="Home-row row p-4 p-md-0">
+            <div class="Home-col pub col-md-6">
+                <div class="Home-card card card-overlay h-100">
+                    <img src="assets/home/monitor1.jpg" alt="" class="Home-img">
+                    <div class="card-title"></div>
+                    <div class="card-body"></div>
+                </div>
+            </div>
+
+            <div class="Home-col col-md-6">
+                <div class="Home-row row">
+                    <div class="Home-col col-md-12 pb-4">
+                        <div class="Home-card card">
+                            <img src="assets/home/monitor2.jpg" alt="" class="Home-img imgreduce">
+
+                        </div>
+                    </div>
+                    <div class="Home-col col-md-6">
+                        <div class="Home-card card">
+                            <img src="assets/home/monitor3.jpg" alt="" class="Home-img">
+                        </div>
+                    </div>
+                    <div class="Home-col col-md-6">
+                        <div class="Home-card card">
+                            <img src="assets/home/monitor2.jpg" alt="" class="Home-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-3">
+            <button class="btn btn-danger btn btn-lg">Ver mas productos</button>
+        </div>
+
+    </div>
+
+
+    <div class="section container mt-5">
+        <img src="assets/home/monitor4.jpg" alt="" class="w-100">
+    </div>
+
+
+
+    <!--SLIDER-->
+
+
+    <div class="Home-section slidering container mt-5 ">
+        <h3 class="display-5 fs-3">NUESTRA GAMA ALTA</h3>
+        <div class="Slider mt-5">
+            <div class="Slider-content" #slider>
+                <div class="Slider-item shadow-sm " #slide *ngFor="let sliderItems of sliderItemsContents">
+                    <div class="row h-100 ">
+                        <div class="col-md-12 text-center p-4">
+                            <h5 class="text-uppercase fw-bold">{{sliderItems.title}}</h5>
+                            <p>{{sliderItems.afterPrice}}</p>
+                            <p class="text-decoration-line-through">{{sliderItems.beforePrice}}</p>
+                        </div>
+                        <div class="col-md-12 h-100 w-100">
+                            <img [src]="sliderItems.img" alt="" class="Home-img slideImg">
+                        </div>
+                    </div>
+                </div>
+                <!--      <div class="Slider-item shadow-sm" #slide></div>
+                <div class="Slider-item shadow-sm" #slide></div>
+                <div class="Slider-item shadow-sm" #slide></div>
+                <div class="Slider-item shadow-sm" #slide></div>
+                <div class="Slider-item shadow-sm" #slide></div> -->
+
+            </div>
+
+
+            <button class="Carrousel-button prev" #prev (click)="clickPrev()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="Carrousel-svg svg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                </svg>
+            </button>
+
+            <button class="Carrousel-button next" #next (click)="clickNext()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="Carrousel-svg svg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+            </button>
+        </div>
+
+    </div>
+
+
+    <!-- END SLIDER -->
+    <div class="Home-section container rounded-2">
+        <div class="Home-row product row">
+            <div class="Home-col col-md-6">
+                <div class="Home-description">
+                    <h3 class="text-danger fs-5 fw-bold">NUEVO</h3>
+                    <h2>ASUS ROG STRIX 28QRX649</h2>
+                    <p>Monitor de alta gama, 4k con panel IPS, 1ms de respuesta para gamers.</p>
+                    <p>Desde S/ 2580.00</p>
+                    <p class="text-decoration-line-through">S/3680</p>
+                </div>
+            </div>
+            <div class="Home-col col-md-6">
+                <img src="assets/home/monitor11.png" alt="" class="Home-img product">
+            </div>
+        </div>
+
+        <div class="Home-row product row">
+            <div class="Home-col col-md-6">
+                <div class="Home-description">
+                    <h3 class="text-danger fs-5 fw-bold">NUEVO</h3>
+                    <h2>ASUS ROG STRIX 28QRX649</h2>
+                    <p>Monitor de alta gama, 4k con panel IPS, 1ms de respuesta para gamers.</p>
+                    <p>Desde S/ 2580.00</p>
+                    <p class="text-decoration-line-through">S/3680</p>
+                </div>
+            </div>
+            <div class="Home-col col-md-6">
+                <img src="assets/home/monitor10.jpeg" alt="" class="Home-img product">
+            </div>
+        </div>
+
+        <div class="Home-row product row">
+            <div class="Home-col col-md-6">
+                <div class="Home-description">
+                    <h3 class="text-danger fs-5 fw-bold">NUEVO</h3>
+                    <h2>ASUS ROG STRIX 28QRX649</h2>
+                    <p>Monitor de alta gama, 4k con panel IPS, 1ms de respuesta para gamers.</p>
+                    <p>Desde S/ 2580.00</p>
+                    <p class="text-decoration-line-through">S/3680</p>
+                </div>
+            </div>
+            <div class="Home-col col-md-6">
+                <img src="assets/home/monitor12.jpg" alt="" class="Home-img product">
+            </div>
+        </div>
+
+    </div>
+
+
+    <app-footer></app-footer>
+
+
+
+</div>

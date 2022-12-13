@@ -1,1 +1,8 @@
+$family: 'Inter', sans-serif;
+$font-family-sans-serif: $family;
+
+$navbar-light-color: black;
+$nav-link-hover-color: red;
+$input-focus-border-color: red;
+$input-focus-box-shadow: 0rem 0rem .3rem red;
 @import "node_modules/bootstrap/scss/bootstrap.scss";

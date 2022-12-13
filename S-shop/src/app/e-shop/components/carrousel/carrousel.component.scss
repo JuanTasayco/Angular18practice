@@ -1,0 +1,121 @@
+@use "src/_custom" as *;
+
+.Carrousel {
+    position: relative;
+
+    &--bgWhite {
+        background-color: white;
+    }
+
+    &-banner {
+        position: relative;
+        margin: 2rem;
+        border-radius: 1rem;
+    }
+
+    &-slider {
+        padding: 0;
+        margin: 0;
+        height: 35rem;
+        position: relative;
+
+        @include media-breakpoint-down(lg) {
+            height: 30rem;
+        }
+
+        &.running {
+            pointer-events: none;
+        }
+    }
+
+    &-img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        border-radius: .3rem;
+    }
+
+    &-li {
+        position: absolute;
+        list-style: none;
+        height: 100%;
+        width: 100%;
+    }
+
+    &-button {
+        position: absolute;
+        padding: .8rem 1rem;
+        border-radius: 50%;
+        top: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        transform: translateY(-100%);
+        &.prev {
+            left: 0;
+
+            @include media-breakpoint-up(xxl) {
+                left: 2%;
+                padding: 1.2rem 1.5rem;
+            }
+        }
+
+        &.next {
+            right: 0;
+
+            @include media-breakpoint-up(xxl) {
+                right: 2%;
+                padding: 1.2rem 1.5rem;
+            }
+        }
+
+        &:hover {
+            background-color: $dark;
+
+            .svg {
+                fill: white;
+            }
+        }
+    }
+
+
+    &-dots {
+        padding: 0;
+        z-index: 99;
+        position: absolute;
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        list-style: none;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &.disabled {
+            opacity: 0.5;
+        }
+    }
+
+    &-dot {
+        &.active {
+            opacity: 1;
+            pointer-events: none;
+        }
+
+    }
+
+
+    &-span {
+        background-color: white;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+}
+
+.activeDot {
+    background-color: red;
+}

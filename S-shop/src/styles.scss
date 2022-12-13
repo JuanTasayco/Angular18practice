@@ -1,6 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
-
+@use "./app/app.component";
 
 @use "./app/auth/pages/login/login.component";
 @use "./app/auth/pages/sign-up/sign-up.component";
-@use "./app/app.component";
+
+
+@use "./app/admin/pages/home/home.component" as homeAdmin;
+
+
+@use "./app/e-shop/shared/navbar-shop/navbar-shop.component";
+@use "./app/e-shop/pages/home/home.component.scss" as homeShop;
+@use "./app/e-shop/components/carrousel/carrousel.component";

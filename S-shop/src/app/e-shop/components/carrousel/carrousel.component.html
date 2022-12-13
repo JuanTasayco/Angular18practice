@@ -1,0 +1,43 @@
+<div class=" Carrousel Carrousel--bgWhite">
+    <div class="Carrousel-banner m-auto container">
+        <ul class="Carrousel-slider" #slider>
+            <li class="Carrousel-li" #slide>
+                <img class="Carrousel-img" src="assets/carrou1.jpg" alt="">
+            </li>
+            <li class="Carrousel-li" #slide>
+                <img class="Carrousel-img" src="assets/carrou2.png" alt="">
+            </li>
+            <li class="Carrousel-li" #slide>
+                <img class="Carrousel-img" src="assets/carrou5.webp" alt="">
+            </li>
+            <li class="Carrousel-li" #slide>
+                <img class="Carrousel-img" src="assets/carrou4.jpg" alt="">
+            </li>
+
+            <ul class="Carrousel-dots" #dots>
+                <li *ngFor="let dot of arrayItems; let i= index" #dot class="Carrousel-dot">
+                    <div class=" Carrousel-span" (click)="clickDot(i)"></div>
+                </li>
+            </ul>
+        </ul>
+    </div>
+
+    <button class="Carrousel-button prev" #prev (click)="clickPrev()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="Carrousel-svg svg"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+        </svg>
+    </button>
+
+    <button class="Carrousel-button next" #next (click)="clickNext()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="Carrousel-svg svg"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+        </svg>
+    </button>
+    <div class="Home-descriptions Carrousel-descriptions container pt-4">
+        <img src="assets/banner-comercial.webp" alt="" class="Home-img Carrousel-img description">
+    </div>
+</div>
