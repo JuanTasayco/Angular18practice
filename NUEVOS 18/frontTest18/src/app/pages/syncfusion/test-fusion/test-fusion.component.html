@@ -1,0 +1,20 @@
+<ejs-calendar id=calendar [isMultiSelection]='true' (change)="onClick($event)"></ejs-calendar>
+
+<div>Material datepicker</div>
+
+<form [formGroup]="calendaryForm">
+    <mat-card class="demo-inline-calendar-card">
+        <mat-calendar #calendario (selectedChange)="select($event,calendario)" [dateClass]="isSelected"></mat-calendar>
+    </mat-card>
+    <p>Selected date: {{selected}}</p>
+</form>
+
+
+Otro calendar
+<!-- otro calendar -->
+
+
+<div (click)="$event.stopPropagation()">
+    <mat-calendar #calendar (selectedChange)="select($event,calendar)" [dateClass]="isSelected">
+    </mat-calendar>
+</div>

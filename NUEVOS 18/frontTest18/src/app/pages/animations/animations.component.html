@@ -1,0 +1,59 @@
+<!-- @defer(){
+<app-code-blocker clase="bg-dark text-white" />
+}@placeholder {
+<div>Cargando....</div>
+}
+
+
+@defer(on idle){
+<app-code-blocker clase=" text-danger" />
+}@placeholder {
+<div>Cargando....</div>
+}
+
+@defer (on viewport){
+<app-code-blocker clase="bg-dark text-white" />
+}@placeholder {
+<div>Cargando....</div>
+} -->
+
+
+
+<!-- Ablock 2 -->
+
+<!-- @defer (on timer(2000)){
+<app-code-blocker clase="bg-danger text-white" />
+}@placeholder{
+<div class="h-100 bg-dark">
+    <div class="text-white">hola</div>
+</div>
+}
+
+
+
+<button #refInteraction class="btn btn-warning">Presionar</button>
+
+@defer (on interaction(refInteraction)){
+<app-code-blocker clase="bg-dark text-white" />
+}@placeholder{
+<div class="h-100 bg-success">
+    <div>hola</div>
+</div>
+}
+
+@defer (on hover){
+<app-code-blocker clase="bg-dark text-white" />
+}@placeholder{
+<div class="h-100 bg-primary">
+    <div>hola</div>
+</div>
+}
+
+
+@defer (on immediate){
+<app-code-blocker clase="bg-danger text-white" />
+}@placeholder{
+<div class="h-100 bg-dark">
+    <div>hola</div>
+</div>
+} -->
